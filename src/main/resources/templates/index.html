@@ -7,12 +7,68 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
     <title>Wild Circus Accueil</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div th:replace="fragments/header :: header"></div>
 
+    <!-- CAROUSEL -->
+    <div class="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img th:src="@{/IMG/trapeze.png}" class="d-block w-100 h-20" alt="Nicolas le trapeziste">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Nicolas fait comme l'oiseau</h5>
+                <p>Pirouette réalisé lors de notre passage à SCHWEIGHOUSE.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img th:src="@{/IMG/voltige.png}" class="d-block w-100 h-20" alt="Carole la voltige">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Carole fait ce qu'elle veut de son corps</h5>
+                <p>Les chevaux d'ILLKIRCH GRAFFENSTADEN ne font qu'un avec Carole.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img th:src="@{/IMG/lion.png}" class="d-block w-100 h-20" alt="Anthony le dresseur de Lion">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Anthony dresse toute le monde</h5>
+                <p>Anthony n'hésite pas une seule seconde avec ce tigre d'Alsace du sud.</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Présentation -->
+      <div class="presentation">
+        <h2>Présentation</h2>
+
+        <p>Le Wild Circus est né en 2019, l'ancienne école de développeur de reims, mené par Clément Bechtoille,
+          se réoriente dans le monde du cirque alsacien.
+          Pourquoi le cirque alsacien ?
+          C'est après un séjour en alsace que Clément tomba amoureux de la région, la choucroute, les fleischnaka ou même les mauricettes,
+          on poussé Clément à tout quitter en emportant dans son périple toute une équipe d'ancien développeur.
+          Grâce aux talents de speaker de Clément et à la capacité de se réinventer de ses collaborateurs, voilà maintenant plusieurs années
+          que le Wild Circus fait des Alsace World Tour.
+        </p>
+      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,5 +1,22 @@
+body{
+    background:linear-gradient(90deg, #141e30 0%,#243b55 100% );
+}
+
+
+/* Header */
+
+
 /* Footer */
 
 footer{
     background-color: black;
 }
+
+/* index */
+
+.presentation{
+    text-align: center;
+    color: aliceblue;
+    padding-top: 2%;
+}
+
