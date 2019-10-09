@@ -23,19 +23,4 @@ public class ReservationController {
     public String browse(Model model){
         return "reservation";
     }
-
-    @PostMapping("/reservations")
-    public String validate(@Valid Reservation reservation, BindingResult bindingResult, RedirectAttributes redirectAttrs) {
-        if(bindingResult.hasErrors()) {
-            for (ObjectError error : bindingResult.getAllErrors()) {
-                System.out.println(error.toString());
-            }
-            redirectAttrs.addFlashAttribute("reservation", reservation);
-            return "redirect:/reservations/create";
-        }
-         else {
-            reservationRepository.save(reservation);
-            return "redirect:/reservations";
-        }
-    }
 }
