@@ -6,11 +6,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Reservation{
-    public Reservation(){
+public class Res{
+    public Res(){
     }
 
-    public Reservation(String firstname, String lastname, String email, int nbWilder,
+    public Res(String firstname, String lastname, String email, int nbWilder,
     int nbChildren, int nbAdult){
         this.firstname = firstname;
         this.lastname = lastname;
