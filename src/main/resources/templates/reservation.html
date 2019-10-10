@@ -7,11 +7,25 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
     <title>Reservation</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div th:replace="fragments/header :: header"></div>
+
+    <h2>Formulaire de réservation</h2>
+
+      <form action="#" th:action="@{/reservation}" method="POST">
+        <div class="form-group">
+            <select class="custom-select" name="representation">
+              <option selected>Sélection de la ville</option>
+              <option th:each="representation : ${representations}" th:value="${representation.id}" th:text=${representation.ville}></option>
+            </select>
+          </div>
+      </form>
+
+    <div th:replace="fragments/footer :: footer"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

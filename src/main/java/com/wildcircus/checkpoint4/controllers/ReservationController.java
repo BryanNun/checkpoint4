@@ -22,7 +22,7 @@ public class ReservationController {
         return "reservation";
     }
 
-    @PostMapping("/reservation/create")
+    @PostMapping("/reservation")
     public String store(@Valid Reservation reservation) {
        reservation = reservationRepository.save(reservation);
        return "redirect:/users/" + reservation.getId();
