@@ -1,5 +1,5 @@
 body{
-    background:linear-gradient(90deg, #141e30 0%,#243b55 100% );
+    background:linear-gradient(180deg, #141e30 0%,#243b55 100% );
 }
 
 
@@ -22,4 +22,14 @@ footer{
 
 .cardright{
     justify-content: right;
+}
+
+.tours{
+    text-align: center;
+    padding-top: 2%;
+}
+
+.tours h2{
+    padding-bottom: 2%;
+    color: aliceblue;
 }
