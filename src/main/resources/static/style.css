@@ -48,3 +48,15 @@ h2{
 label{
     color: aliceblue;
 }
+@media (min-width: 640px) {
+    .etienne{
+        position: absolute;
+        margin-left: -20%;
+    }
+}
+
+@media (max-width: 640px) {
+    .etienne{
+        display: none;
+    }
+}

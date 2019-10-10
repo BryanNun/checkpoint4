@@ -45,6 +45,9 @@
       </div>
     </div>
 
+
+    <img th:src="@{/IMG/etienne.png}" class="etienne" alt="etienne l'homme canon">
+
     <!-- Reservation -->
     <div class="my-3 d-flex justify-content-center">
     <h2>Formulaire de réservation</h2>
@@ -52,8 +55,8 @@
       <form action="#" th:action="${action}" th:object="${reservation}" th:method="${method}">
         <div class="form-group">
             <div class="my-3 d-flex justify-content-center">
-            <select class="custom-select" th:field="*{city}" style="width: 75%" name="city">
-              <option value="" selected disabled>Sélection de la ville</option>
+            <select class="custom-select" th:field="*{city}" style="width: 40%" name="city">
+              <option value="" selected>Sélection de la ville</option>
               <option th:value="Baldersheim" th:text="Baldersheim">Baldersheim</option>
               <option th:value="Souffelweyersheim" th:text="Souffelweyersheim">Souffelweyersheim</option>
               <option th:value="Oberhausbergen" th:text="Oberhausbergen">Oberhausbergen</option>
@@ -64,23 +67,27 @@
           </div>
           <div class="my-3 d-flex justify-content-center">
             <div class="div-group">
-                <div class="input-group mb-3" style="padding: 2%">
+                <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"></span>
                     </div>
                     <input type="text" th:field="*{lastname}" class="form-control" placeholder="Nom" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
               </div>
+          </div>
+          <div class="my-3 d-flex justify-content-center">
             <div class="div-group">
-              <div class="input-group mb-3" style="padding: 2%">
+              <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"></span>
                   </div>
                   <input type="text" th:field="*{firstname}" class="form-control" placeholder="Prénom" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
+          </div>
+          <div class="my-3 d-flex justify-content-center">
             <div class="div-group">
-                <div class="input-group mb-3" style="padding: 2%">
+                <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"></span>
                     </div>
@@ -88,6 +95,7 @@
                   </div>
               </div>
             </div>
+          </div>
             <div class="my-3 d-flex justify-content-center">
             <div class="input-group mb-3" style="width: 30%">
               <div class="input-group-prepend">
@@ -138,10 +146,14 @@
             </div>
           </div>
           <div class="my-3 d-flex justify-content-center">
-          <button type="submit" class="btn btn-dark">Réserver</button>
+            <button type="submit" onclick="myFunction()" class="btn btn-dark">Réserver</button>
           </div>
+          <script>
+            function myFunction() {
+            alert("La réservation à bien été réalisé, vous allez recevoir un mail dans les prochains jours.");
+            }
+          </script>
       </form>
-
     <div th:replace="fragments/footer :: footer"></div>
 
     <!-- Optional JavaScript -->
