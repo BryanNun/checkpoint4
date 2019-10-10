@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RepresentationRepository extends JpaRepository<Representation, Long> {
-    public Representation findByEmail(String ville);
 }

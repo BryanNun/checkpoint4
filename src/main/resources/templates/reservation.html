@@ -16,13 +16,34 @@
 
     <h2>Formulaire de réservation</h2>
 
-      <form action="#" th:action="@{/reservation}" method="POST">
+      <form>
         <div class="form-group">
-            <select class="custom-select" name="representation">
+            <div class="my-3 d-flex justify-content-center">
+            <select class="custom-select" style="width: 75%" name="city">
               <option selected>Sélection de la ville</option>
-              <option th:each="representation : ${representations}" th:value="${representation.id}" th:text=${representation.ville}></option>
+              <option value="Baldersheim">Baldersheim</option>
+              <option value="Souffelweyersheim">Souffelweyersheim</option>
+              <option value="Oberhausbergen">Oberhausbergen</option>
+              <option value="Guebwiller">Guebwiller</option>
+              <option value="Altkirch">Altkirch</option>
             </select>
+            </div>
           </div>
+          <div class="my-3 d-flex justify-content-center">
+            <div class="div-group">
+              <label for="name" style="padding-left: 3%">Nom :</label>
+              <input type="text" id="name" class="div-control" placeholder="Nom">
+            </div>
+            <div class="div-group">
+              <label for="name" style="padding-left: 3%">Prénom :</label>
+              <input type="text" id="name" class="div-control" placeholder="Prénom">
+            </div>
+            <div class="div-group">
+              <label for="name" style="padding-left: 3%">Adresse email :</label>
+              <input type="email" id="email" placeholder="E-mail">
+            </div>
+          </div>
+        </div> 
       </form>
 
     <div th:replace="fragments/footer :: footer"></div>
