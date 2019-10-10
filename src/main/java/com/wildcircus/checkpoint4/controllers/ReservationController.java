@@ -23,7 +23,7 @@ public class ReservationController {
 
     @GetMapping("/reservation")
     public String create(@ModelAttribute Reservation reservation, Model model) {
-        model.addAttribute("action", "/payplans");
+        model.addAttribute("action", "/reservation");
         model.addAttribute("method", "post");
         model.addAttribute("reservation", reservation);
         return "/reservation";

@@ -49,16 +49,16 @@
     <div class="my-3 d-flex justify-content-center">
     <h2>Formulaire de réservation</h2>
     </div>
-      <form>
+      <form action="#" th:action="${action}" th:object="${reservation}" th:method="${method}">
         <div class="form-group">
             <div class="my-3 d-flex justify-content-center">
-            <select class="custom-select" style="width: 75%" name="city">
+            <select class="custom-select" th:field="*{city}" style="width: 75%" name="city">
               <option selected>Sélection de la ville</option>
-              <option value="Baldersheim">Baldersheim</option>
-              <option value="Souffelweyersheim">Souffelweyersheim</option>
-              <option value="Oberhausbergen">Oberhausbergen</option>
-              <option value="Guebwiller">Guebwiller</option>
-              <option value="Altkirch">Altkirch</option>
+              <option th:value="Baldersheim" th:text="Baldersheim">Baldersheim</option>
+              <option th:value="Souffelweyersheim" th:text="Souffelweyersheim">Souffelweyersheim</option>
+              <option th:value="Oberhausbergen" th:text="Oberhausbergen">Oberhausbergen</option>
+              <option th:value="Guebwiller" th:text="Guebwiller">Guebwiller</option>
+              <option th:value="Altkirch" th:text="Altkirch">Altkirch</option>
             </select>
             </div>
           </div>
@@ -68,7 +68,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Nom" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" th:field="*{lastname}" class="form-control" placeholder="Nom" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
               </div>
             <div class="div-group">
@@ -76,7 +76,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"></span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Prénom" aria-label="Username" aria-describedby="basic-addon1">
+                  <input type="text" th:field="*{firstname}" class="form-control" placeholder="Prénom" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
             <div class="div-group">
@@ -84,7 +84,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" th:field="*{email}" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
               </div>
             </div>
@@ -93,14 +93,14 @@
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Places adultes</label>
               </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option selected>Quantité</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
+                <select class="custom-select" th:field="*{nbAdult}" id="inputGroupSelect01">
+                  <option th:value ="0" selected>Quantité</option>
+                  <option th:value="1">1</option>
+                  <option th:value="2">2</option>
+                  <option th:value="3">3</option>
+                  <option th:value="4">4</option>
+                  <option th:value="5">5</option>
+                  <option th:value="6">6</option>
                 </select>
               </div>
             </div>
@@ -109,14 +109,14 @@
               <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Places enfants</label>
               </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option selected>Quantité</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
+                <select class="custom-select" th:field="*{nbChildren}" id="inputGroupSelect01">
+                  <option th:value ="0" selected>Quantité</option>
+                  <option th:value="1">1</option>
+                  <option th:value="2">2</option>
+                  <option th:value="3">3</option>
+                  <option th:value="4">4</option>
+                  <option th:value="5">5</option>
+                  <option th:value="6">6</option>
                 </select>
             </div>
             </div>
@@ -125,14 +125,14 @@
               <div class="input-group-prepend">
                   <label class="input-group-text" for="inputGroupSelect01">Places wilders</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option selected>Quantité</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
+                <select class="custom-select" th:field="*{nbWilder}" id="inputGroupSelect01">
+                  <option th:value ="0" selected>Quantité</option>
+                  <option th:value="1">1</option>
+                  <option th:value="2">2</option>
+                  <option th:value="3">3</option>
+                  <option th:value="4">4</option>
+                  <option th:value="5">5</option>
+                  <option th:value="6">6</option>
                 </select>
               </div>
             </div>
