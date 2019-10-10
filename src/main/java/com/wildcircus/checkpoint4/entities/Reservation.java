@@ -11,13 +11,14 @@ public class Reservation{
     }
 
     public Reservation(String firstname, String lastname, String email, int nbWilder,
-    int nbChildren, int nbAdult){
+    int nbChildren, int nbAdult, String city){
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.nbWilder = nbWilder;
         this.nbChildren = nbChildren;
         this.nbAdult = nbAdult;
+        this.city = city;
 
     }
 
@@ -30,6 +31,7 @@ public class Reservation{
     private int nbWilder;
     private int nbChildren;
     private int nbAdult;
+    private String city;
 
 
     /**
@@ -128,6 +130,21 @@ public class Reservation{
      */
     public void setNbAdult(int nbAdult) {
         this.nbAdult = nbAdult;
+    }
+
+
+    /**
+     * @return String return the city
+     */
+    public String getCity() {
+        return city;
+    }
+
+    /**
+     * @param city the city to set
+     */
+    public void setCity(String city) {
+        this.city = city;
     }
 
 }

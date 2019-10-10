@@ -11,6 +11,7 @@ body{
 footer{
     background:linear-gradient(90deg, #000428 0%,#004e92 100% );
     text-align: center;
+    padding-top: 1%;
 }
 
 
@@ -34,5 +35,16 @@ footer{
 
 .tours h2{
     padding-bottom: 2%;
+    color: aliceblue;
+}
+
+/* Reservation */
+
+h2{
+    padding-bottom: 2%;
+    color: aliceblue;
+}
+
+label{
     color: aliceblue;
 }
