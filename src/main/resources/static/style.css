@@ -1,5 +1,5 @@
 body{
-    background:linear-gradient(180deg, #141e30 0%,#243b55 100% );
+    background:linear-gradient(90deg, #000428 0%,#004e92 100% );
 }
 
 
@@ -9,8 +9,11 @@ body{
 /* Footer */
 
 footer{
-    background-color: black;
+    background:linear-gradient(90deg, #000428 0%,#004e92 100% );
+    text-align: center;
 }
+
+
 
 /* index */
 
