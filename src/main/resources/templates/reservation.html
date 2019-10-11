@@ -148,13 +148,14 @@
           <div class="my-3 d-flex justify-content-center">
             <button type="submit" onclick="myFunction()" class="btn btn-dark">Réserver</button>
           </div>
-          <script>
-            function myFunction() {
-            alert("La réservation à bien été réalisé, vous allez recevoir un mail dans les prochains jours.");
-            }
-          </script>
       </form>
     <div th:replace="fragments/footer :: footer"></div>
+
+    <script>
+        function myFunction() {
+        alert("La réservation à bien été réalisé, vous allez recevoir un mail dans les prochains jours.");
+        }
+      </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
